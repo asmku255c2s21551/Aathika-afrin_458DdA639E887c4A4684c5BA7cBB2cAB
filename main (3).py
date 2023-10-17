@@ -1,11 +1,15 @@
-class defaultdict(dict):
+Function to withdraw the amount
 
-    def __init__(self, default=None):
-        dict.__init__(self)
-        self.default = default
+def withdraw(self):
 
-    def __getitem__(self, key):
-        try:
-            return dict.__getitem__(self, key)
-        except KeyError:
-            return self.default
+        amount = float(input("Enter amount to be withdrawn: "))
+
+        if self.balance >= amount:
+
+            self.balance -= amount
+
+            print("\n You Withdrew:", amount)
+
+        else:
+
+            print("\n Insufficient
